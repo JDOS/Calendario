@@ -16,10 +16,14 @@
 </head>
 <body>
     <h1>JDOS</h1>
-    
-    <a href="teste.php">Calendário</a>
-    <!-- <textarea name="message" rows="1" cols="3"></textarea> -->
     <br>
+    <p>Código Estrutural Exemplar de <a href="ExemploCalendario.php">Calendário</a></p>
+    <br>
+    <form action="mesControle.php" method="GET">
+        
+    <input type="text" name="mes">
+    <input type="submit">
+    </form>
     <H1>Calendário Versão 0.8</h1>
     <?php
     include 'Mes.php';
