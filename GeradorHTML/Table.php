@@ -11,17 +11,23 @@
  *
  * @author Daniel
  */
-class Table {
+//include 'Elemento.php';
+
+class Table extends Elemento {
    
-    private $tagname;
-    private $data;
-    private $style;
    
     public function __construct() {
-        $this->tag="table";
+        //cria elemento TABLE
+        parent::__construct('table');
     }
     
-    public function __set($propriedade){
-        
+    public function addLinha(){
+        //Cria linha (TR) 
+        $linha = new Row;
+        //Adiciona na Tabela
+        parent::add($linha);
+        return $linha;
     }
+    
+    
 }
