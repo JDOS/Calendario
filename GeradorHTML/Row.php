@@ -1,4 +1,6 @@
 <?php
+require_once 'Elemento.php';
+require_once 'Cell.php';
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,7 +13,7 @@
  *
  * @author Daniel
  */
-include 'Elemento.php';
+
 
 class Row extends Elemento{
     public function __construct() {
@@ -19,8 +21,8 @@ class Row extends Elemento{
     } 
     public function addCell($valor){
         //Cria Celula (td) da linha
-        $cell = new Cell;
-        parent::add($valor);
+        $cell = new Cell($valor);
+        parent::add($cell);
         //retorna objeto instanciado
         return $cell;
     }

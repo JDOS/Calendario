@@ -34,7 +34,7 @@ class Elemento {
         
     }
     
-    public function __get($name) {
+    public function __get($nome) {
         //verifica se existe a propriedade, caso sim retorna, caso não retorna NULL
         return isset($this->propriedade[$nome])? $this->propriedade[$nome]:NULL;
     }
@@ -44,14 +44,15 @@ class Elemento {
     }
     
     public function mostrar(){
-        $this->abrir();
         echo "\n";
+        $this->abrir();
+      
         //Verifica se tem filhos
         if ($this->filhos){
             foreach($this->filhos as $filho){
                 //verifica se o filho é um objeto
                 if(is_object($filho)){
-                    $filho->mostrar;
+                    $filho->mostrar();
                 }
                 else if ((is_string($filho) or (is_numeric($filho)))){
                     echo $filho;
@@ -77,7 +78,7 @@ class Elemento {
                 //verifica se é do tipo escalar (string, integer, float ou boolean)
                 if (is_scalar($valor)){
                     //insesre as propriedades na tag
-                    echo " {$nome} = \"{$valor} \" ";
+                    echo " {$nome} = \"{$valor}\" ";
                 }
             }
         }
@@ -88,6 +89,7 @@ class Elemento {
     private function fechar(){
         //termina a tag
         echo "</{$this->tagname}>";
+        echo "\n";
     }
     
     /*

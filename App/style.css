@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06/06/2017, 22:20:08
+    Author     : Daniel
+*/
+
+    
+    h1 {
+
+        text-align: center;
+    }
+    
+     .cabecalho{
+        background-color: rgb(33, 22, 22);
+        font-weight: bold;
+        color:white;
+    }
+    .domingo{
+        background-color: rgba(255, 87, 34, 0.56);
+        
+    }
+    .sabado {
+        background-color: greenyellow;
+    }
+    .calendario{
+         width: 150px;
+         height: 10%;
+         padding:3px;
+         margin: 0 auto;
+         display: inline-block;
+         justify-content: center;
+    }
+    caption.mes{
+        background-color: rgb(33, 22, 22);
+        font-weight: bold;
+        color:white;
+    }
+
+    
+    table, th, td {
+            border-collapse: collapse;
+            text-align: center;
+            font-family: verdana;
+            background-color: rgba(0, 188, 212, 0.08);
+    }
+  
+   

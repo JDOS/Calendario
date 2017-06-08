@@ -13,7 +13,10 @@
  */
  -->
  <html>
-     
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="App/style.css">
+</head>
 <style>
         table{
             width: 100%;
@@ -30,11 +33,11 @@
  </STYLE>
  
 <?php    
-include "Calendario.php";
+require_once "App\Calendario.php";
 
 
 
-echo "O mes digitado é ".$_GET['mes'];
+//echo "O mes digitado é ".$_GET['mes'];
 
 $calendario = new Calendario(2017);
 $calendario->mostrarMes($_GET['mes']);

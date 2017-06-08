@@ -14,10 +14,25 @@
 class Mes {
     
     private $dias;    
+    private $mes;
+    private $meses = array( 
+       '1' => "Janeiro", 
+       '2' => "Fevereiro",
+       '3' => "Março",
+       '4' => "Abril",
+       '5' => "Maio",  
+       '6' => "Junho",
+       '7' => "Julho", 
+       '8' => "Agosto",  
+       '9' => "Setembro",
+       '10' => "Outubro",
+       '11' => "Novembro", 
+       '12' => "Dezembro"
+    );
     
     
     public function __construct($mes, $ano){
-        
+        $this->mes=$mes;
          $i=1;
          $numerodiames= array(
             '1'=>31,
@@ -72,4 +87,14 @@ class Mes {
           }
        
   }
+  public function getMes(){
+      return $this->meses[$this->mes];
+  }
+  
+  public function __toString() {
+        ob_start();//começa armazenar o conteudo em um buffer
+        $this->getMes();//armazena no buffer a saída de mostrar() 
+        $conteudo = ob_get_clean();//despeja o buffer na variavel $conteudo e limpa buffer
+        return $conteudo;
+    }
 }

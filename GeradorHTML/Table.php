@@ -1,5 +1,6 @@
 <?php
-
+include_once 'Elemento.php';
+include_once 'Row.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,7 +12,7 @@
  *
  * @author Daniel
  */
-//include 'Elemento.php';
+
 
 class Table extends Elemento {
    
